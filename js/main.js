@@ -109,3 +109,30 @@ document.querySelectorAll('.card').forEach(card => {
         this.style.transform = `translateY(-10px) scale(1.02) rotateX(${yPercent}deg) rotateY(${xPercent}deg)`;
     });
 });
+
+// Donation Modal
+const donateBtn = document.querySelector('.donate-btn');
+const modal = document.getElementById('donate-modal');
+const closeModal = document.querySelector('.close-modal');
+
+donateBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.add('active');
+});
+
+closeModal.addEventListener('click', () => {
+    modal.classList.remove('active');
+});
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('active');
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+    }
+});

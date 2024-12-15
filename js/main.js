@@ -69,13 +69,43 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Card Hover Effect
+// Card Click Handlers
 document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px)';
+    card.addEventListener('click', function() {
+        const pluginId = this.getAttribute('data-plugin');
+        if (pluginId) {
+            window.location.href = `plugins/${pluginId}.html`;
+        }
+    });
+});
+
+// Enhanced Card Hover Effect
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mouseenter', function(e) {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+        const img = this.querySelector('img');
+        if (img) {
+            img.style.transform = 'scale(1.1)';
+        }
     });
     
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
+    card.addEventListener('mouseleave', function(e) {
+        this.style.transform = 'translateY(0) scale(1)';
+        const img = this.querySelector('img');
+        if (img) {
+            img.style.transform = 'scale(1)';
+        }
+    });
+
+    // Parallax effect on hover
+    card.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const xPercent = (x / rect.width - 0.5) * 20;
+        const yPercent = (y / rect.height - 0.5) * 20;
+        
+        this.style.transform = `translateY(-10px) scale(1.02) rotateX(${yPercent}deg) rotateY(${xPercent}deg)`;
     });
 });

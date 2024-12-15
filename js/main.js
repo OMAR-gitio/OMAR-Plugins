@@ -136,3 +136,30 @@ document.addEventListener('keydown', (e) => {
         modal.classList.remove('active');
     }
 });
+
+// Contact Modal
+const contactBtn = document.querySelector('.contact-btn');
+const contactModal = document.getElementById('contact-modal');
+const closeContactModal = contactModal.querySelector('.close-modal');
+
+contactBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    contactModal.classList.add('active');
+});
+
+closeContactModal.addEventListener('click', () => {
+    contactModal.classList.remove('active');
+});
+
+contactModal.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+        contactModal.classList.remove('active');
+    }
+});
+
+// Close contact modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && contactModal.classList.contains('active')) {
+        contactModal.classList.remove('active');
+    }
+});

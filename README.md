@@ -4,46 +4,19 @@ Welcome to my collection of AMX Mod X plugins for Counter-Strike 1.6! This repos
 
 ## Featured Plugins
 
-### Game Modes
-- Tag Mode for Zombie Plague Special
-- Cannibal Mode (Zombies vs Zombies)
-- Nemesis Xtreme Mode
-
-### Special Classes
-- Thanos Special Class
-- Pain/Nagato Special Class
-- Sonic & Shadow Special Class
-- Antidoter Special Class
-- Plasma Special Class
-- Dragon Ball Mod Special Class
-
-### Custom Weapons
-- Thunder Weapon
-- Paintball Gun
-- Frost M4A1
+### Modes
+- Zombie Escape Apocalypse
+- Zombie Escape Nightmare
+- Zombie Escape DarkProfessional Darkness
+- Zombie Escape Annihilation
 
 ## Installation
 
-1. Download the desired plugin
-2. Place the .amxx file in your `cstrike/addons/amxmodx/plugins` folder
-3. Add the plugin to your plugins.ini file
-4. Restart your server
+1. __Download the desired ZIP__
+2. __Copy all file in your `cstrike/` folder__
+3. __Add the plugin to your plugins.ini file__
+4. __Restart your server__
 
 ## Contact
 
-- Discord: [O]MA(R)#0000
-- Steam: [O]MA(R)
-- GitHub: [Your GitHub Profile]
-
-## License
-
-All plugins are available under the MIT License. Feel free to use and modify them, but please provide credit.
-
-## Contributing
-
-If you'd like to contribute or report issues, please:
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+- **Discord: [O]MA(R)#8743**

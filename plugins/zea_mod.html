@@ -12,14 +12,15 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-brand">
-            <img src="https://i.imgur.com/dJzl166.png" alt="[O]MA(R)'s Website" class="logo">
-            <span>[O]MA(R)'s Website</span>
+            <a href="../index.html" class="brand-link">
+                <img src="https://i.imgur.com/dJzl166.png" alt="[O]MA(R)'s Website" class="logo">
+                <span>[O]MA(R)'s Website</span>
+            </a>
         </div>
         <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../index.html#plugins">Plugin List</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
-            <li><a href="#" class="donate-btn">Donate</a></li>
         </ul>
     </nav>
 
@@ -43,7 +44,7 @@
         <div class="video-section">
             <h2>Gameplay Preview</h2>
             <div class="video-container">
-                <iframe width="400" height="230" src="https://www.youtube.com/watch?v=Ey-EPM47q3o&t=4s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="250" height="200" src="https://www.youtube.com/embed/Ey-EPM47q3o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -60,6 +61,75 @@
 
     <!-- Particles Background -->
     <div id="particles-js"></div>
+
+    <!-- Contact Section -->
+    <footer class="footer">
+        <h2>Contact:</h2>
+        <div class="contact-links">
+            <a href="https://discord.com/users/OMAR#8743" class="contact-item">
+                <img src="https://i.imgur.com/FzDkLBD.png" alt="Discord">
+                <span>Discord</span>
+            </a>
+            <a href="https://steamcommunity.com/profiles/76561199501994798/" class="contact-item">
+                <img src="https://i.imgur.com/ryp8HNu.png" alt="Steam">
+                <span>Steam</span>
+            </a>
+            <a href="https://www.youtube.com/@O.M-A.R" class="contact-item">
+                <img src="https://i.imgur.com/hLGKHgx.png" alt="Github">
+                <span>You-Tube</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100050334612024" class="contact-item" target="_blank">
+                <img src="https://i.imgur.com/kXVMbMY.png" alt="Facebook">
+                <span>Facebook</span>
+            </a>            
+        </div>
+        <div class="copyright">
+            <p>Website Developed by: [O]MA(R)</p>
+            <p>&copy; 2024</p>
+        </div>
+    </footer>
+
+    <!-- Donate Modal -->
+    <div id="donate-modal" class="modal">
+        <div class="modal-content">
+            <div class="fire-border"></div>
+            <h2>Support My Work</h2>
+            <p>PayPal: hadyelkady772@yahoo.com</p>
+            <div class="fire-effect"></div>
+            <button class="close-modal">✖</button>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <div class="fire-effect fire-top"></div>
+            <div class="fire-effect fire-bottom"></div>
+            <div class="fire-effect fire-left"></div>
+            <div class="fire-effect fire-right"></div>
+            
+            <h2>Contact Me</h2>
+            <div class="social-links">
+                <a href="https://discord.com/users/OMAR#8743" class="social-item" target="_blank">
+                    <img src="https://i.imgur.com/FzDkLBD.png" alt="Discord">
+                    <span>Discord: OMAR#8743</span>
+                </a>
+                <a href="https://steamcommunity.com/profiles/76561199501994798/" class="social-item" target="_blank">
+                    <img src="https://i.imgur.com/ryp8HNu.png" alt="Steam">
+                    <span>Steam Profile</span>
+                </a>
+                <a href="https://www.youtube.com/@O.M-A.R" class="social-item" target="_blank">
+                    <img src="https://i.imgur.com/hLGKHgx.png" alt="YouTube">
+                    <span>YouTube Channel</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100050334612024" class="social-item" target="_blank">
+                    <img src="https://i.imgur.com/kXVMbMY.png" alt="Facebook">
+                    <span>Facebook Profile</span>
+                </a>
+            </div>
+            <button class="close-modal">✖</button>
+        </div>
+    </div>    
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="../js/main.js"></script>

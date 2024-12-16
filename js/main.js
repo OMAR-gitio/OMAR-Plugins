@@ -147,19 +147,6 @@ const donateBtn = document.querySelector('.donate-btn');
 const modal = document.getElementById('donate-modal');
 const closeModal = document.querySelector('.close-modal');
 
-// Function to open the donate modal
-function openDonateModal() {
-    document.getElementById('donateModal').style.display = 'flex';
-}
-
-// Function to close the donate modal
-function closeDonateModal() {
-    document.getElementById('donateModal').style.display = 'none';
-}
-
-// Add event listener to the donate button
-document.querySelector('.donate-btn').addEventListener('click', openDonateModal);
-
 donateBtn.addEventListener('click', (e) => {
     e.preventDefault();
     modal.classList.add('active');

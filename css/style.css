@@ -209,6 +209,75 @@ body {
     color: var(--hover-color);
 }
 
+.plugin-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.plugin-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.plugin-card:hover {
+    transform: translateY(-5px);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.plugin-card:hover::before {
+    opacity: 0.3;
+}
+
+@keyframes rotateShape {
+    0% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    100% {
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+}
+
+.plugin-card h3 {
+    color: #ff6b00;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.plugin-card:hover h3 {
+    transform: scale(1.1);
+}
+
+.plugin-card p {
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.plugin-card:hover p {
+    opacity: 1;
+}
+
 /* Plugin Detail Page Styles */
 .plugin-detail {
     max-width: 1200px;
@@ -309,6 +378,20 @@ body {
     background: #fff;
     box-shadow: 0 0 15px rgba(51, 228, 255, 0.5);
     transform: translateY(-2px);
+}
+
+.donate-btn {
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.5);
 }
 
 .credits-section {
@@ -487,9 +570,20 @@ body {
 }
 
 .slider-image {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
+    width: 300px;  
+    height: 200px; 
+    object-fit: contain; 
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.slider-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
 }
 
 .slider-info {

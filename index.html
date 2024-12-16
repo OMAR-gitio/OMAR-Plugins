@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home -|- [O]MA(R)'s Website</title>
-    <img src="https://i.imgur.com/dJzl166.png" alt="[O]MA(R)'s Plugin" class="logo">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -12,8 +11,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-brand">
-            <img src="https://i.imgur.com/dJzl166.png" alt="[O]MA(R)'s Plugin" class="logo">
-            <span>[O]MA(R)'s Plugin</span>
+            <a href="index.html" class="brand-link">
+                <img src="https://i.imgur.com/dJzl166.png" alt="[O]MA(R)'s Plugin" class="logo">
+                <span>[O]MA(R)'s Plugin</span>
+            </a>
         </div>
         <ul class="nav-links">
             <li><a href="#" class="active">Home</a></li>
@@ -34,9 +35,32 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <img src="https://i.imgur.com/dJzl166.png" alt="Hero Banner" class="hero-banner">
-            <h1>Welcome to [O]MA(R)'s Website</h1>
-            <p>Here you can find all plugins created by [O]MA(R)</p>
+            <div class="plugin-slider">
+                <button class="slider-arrow prev">❮</button>
+                <div class="slider-container">
+                    <div class="slider-item active">
+                        <img src="https://i.imgur.com/dJzl166.png" alt="Plugin 1" class="slider-image">
+                        <div class="slider-info">
+                            <h3>Plugin Name 1</h3>
+                            <p>Plugin Description 1</p>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://i.imgur.com/your-image-2.png" alt="Plugin 2" class="slider-image">
+                        <div class="slider-info">
+                            <h3>Plugin Name 2</h3>
+                            <p>Plugin Description 2</p>
+                        </div>
+                    </div>
+                    <!-- Add more slider items as needed -->
+                </div>
+                <button class="slider-arrow next">❯</button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <!-- Add more dots as needed -->
+                </div>
+            </div>
         </div>
     </header>
 
@@ -189,6 +213,10 @@
                 <img src="https://i.imgur.com/hLGKHgx.png" alt="Github">
                 <span>You-Tube</span>
             </a>
+            <a href="https://www.facebook.com/profile.php?id=100050334612024" class="contact-item" target="_blank">
+                <img src="https://i.imgur.com/kXVMbMY.png" alt="Facebook">
+                <span>Facebook</span>
+            </a>            
         </div>
         <div class="copyright">
             <p>Website Developed by: [O]MA(R)</p>
@@ -232,8 +260,8 @@
                     <img src="https://i.imgur.com/hLGKHgx.png" alt="YouTube">
                     <span>YouTube Channel</span>
                 </a>
-                <a href="https://www.facebook.com/your.facebook" class="social-item" target="_blank">
-                    <img src="https://i.imgur.com/UdBXn0h.png" alt="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=100050334612024" class="social-item" target="_blank">
+                    <img src="https://i.imgur.com/kXVMbMY.png" alt="Facebook">
                     <span>Facebook Profile</span>
                 </a>
             </div>

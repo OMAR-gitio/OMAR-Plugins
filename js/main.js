@@ -110,6 +110,38 @@ document.querySelectorAll('.card').forEach(card => {
     });
 });
 
+// Plugin Slider
+const sliderItems = document.querySelectorAll('.slider-item');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let currentSlide = 0;
+
+function showSlide(n) {
+    sliderItems.forEach(item => item.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    currentSlide = n;
+    if (currentSlide >= sliderItems.length) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = sliderItems.length - 1;
+    
+    sliderItems[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+});
+
+// Auto slide every 5 seconds
+setInterval(() => showSlide(currentSlide + 1), 5000);
+
+// Initialize first slide
+showSlide(0);
+
 // Donation Modal
 const donateBtn = document.querySelector('.donate-btn');
 const modal = document.getElementById('donate-modal');

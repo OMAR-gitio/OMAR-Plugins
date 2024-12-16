@@ -212,3 +212,10 @@ function createWaterDrops() {
 }
 
 createWaterDrops();
+
+document.querySelectorAll('.dropdown-toggle').forEach(item => {
+    item.addEventListener('click', event => {
+        const dropdownMenu = item.nextElementSibling;
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+});

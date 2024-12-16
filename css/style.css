@@ -184,7 +184,7 @@ body {
 }
 
 .card img {
-    width: 100%;
+    width: 60%;
     height: auto;
     transition: all 0.5s ease;
     position: relative;
@@ -394,7 +394,7 @@ body {
 }
 
 .plugin-banner {
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 2rem;

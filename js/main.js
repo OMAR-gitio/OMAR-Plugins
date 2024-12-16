@@ -195,3 +195,20 @@ document.addEventListener('keydown', (e) => {
         contactModal.classList.remove('active');
     }
 });
+
+function createWaterDrops() {
+    const navbar = document.querySelector('.navbar'); // Select the navbar
+    const waterEffect = document.createElement('div');
+    waterEffect.className = 'water-effect';
+    navbar.appendChild(waterEffect); // Append to navbar
+
+    for (let i = 0; i < 50; i++) { // Adjust the number of drops
+        const drop = document.createElement('div');
+        drop.className = 'water-drop';
+        drop.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+        drop.style.animationDuration = Math.random() * 2 + 1 + 's'; // Random fall speed
+        waterEffect.appendChild(drop);
+    }
+}
+
+createWaterDrops();

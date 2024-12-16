@@ -38,10 +38,10 @@ body {
     margin-bottom: 2rem;
     background-color: var(--secondary-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: center/*space-between*/;
     align-items: center;
-    position: fixed;
-    width: 100%;
+    position: relative/*fixed*/;
+    width: 70%/*100%*/;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -723,12 +723,15 @@ body {
 
 .fire-effect {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: -20px; /* Adjust as needed */
+    left: -20px; /* Adjust as needed */
+    width: calc(100% + 40px); /* Extend width */
+    height: calc(100% + 40px); /* Extend height */
     background: radial-gradient(circle, rgba(255, 255, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
     opacity: 0.3;
     animation: flicker 1.5s infinite alternate;
     pointer-events: none; /* Prevents interaction with the fire effect */
+    border-radius: 10px; /* Optional: round the corners */
 }
 
 @keyframes flicker {
@@ -740,5 +743,33 @@ body {
     }
     100% {
         opacity: 0.3;
+    }
+}
+
+.water-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction */
+    overflow: hidden; /* Hide overflow */
+}
+
+.water-drop {
+    position: absolute;
+    bottom: 100%; /* Start above the element */
+    width: 5px;
+    height: 20px;
+    background: rgba(0, 0, 255, 0.5);
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh); /* Fall to the bottom */
     }
 }
